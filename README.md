@@ -59,26 +59,26 @@ For each record in the dataset it is provided:
 activity.labels <- read.table("./activity_labels.txt", header = FALSE, sep = " ")
 
 activity.labels
-. V1                V2
-. 1            WALKING
-. 2   WALKING_UPSTAIRS
-. 3 WALKING_DOWNSTAIRS
-. 4            SITTING
-. 5           STANDING
-. 6             LAYING
+* V1                V2
+* 1            WALKING
+* 2   WALKING_UPSTAIRS
+* 3 WALKING_DOWNSTAIRS
+* 4            SITTING
+* 5           STANDING
+* 6             LAYING
   
 ##read the feature variable (names) into a dataframe
 
 features <- read.table("./features.txt", header = FALSE, sep = " ", stringsAsFactors = FALSE)
 
 head(features)
-V1                V2
-1  1 tBodyAcc-mean()-X
-2  2 tBodyAcc-mean()-Y
-3  3 tBodyAcc-mean()-Z
-4  4  tBodyAcc-std()-X
-5  5  tBodyAcc-std()-Y
-6  6  tBodyAcc-std()-Z
+* V1                V2
+1.  1 tBodyAcc-mean()-X
+2.  2 tBodyAcc-mean()-Y
+3.  3 tBodyAcc-mean()-Z
+4.  4  tBodyAcc-std()-X
+5.  5  tBodyAcc-std()-Y
+6.  6  tBodyAcc-std()-Z
 str(features)
 note there are 561 rows in the features data frame
 
