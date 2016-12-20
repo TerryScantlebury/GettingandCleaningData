@@ -59,14 +59,13 @@ For each record in the dataset it is provided:
 activity.labels <- read.table("./activity_labels.txt", header = FALSE, sep = " ")
 
 activity.labels
-
-  -V1                V2
-  -1            WALKING
-  -2   WALKING_UPSTAIRS
-  -3 WALKING_DOWNSTAIRS
-  -4            SITTING
-  -5           STANDING
-  -6             LAYING
+. V1                V2
+. 1            WALKING
+. 2   WALKING_UPSTAIRS
+. 3 WALKING_DOWNSTAIRS
+. 4            SITTING
+. 5           STANDING
+. 6             LAYING
   
 ##read the feature variable (names) into a dataframe
 
