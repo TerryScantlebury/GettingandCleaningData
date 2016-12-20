@@ -54,7 +54,7 @@ For each record in the dataset it is provided:
 
 # How the tidy data was generated
 
-read the activity labels into a dataframe
+##read the activity labels into a dataframe
 activity.labels <- read.table("./activity_labels.txt", header = FALSE, sep = " ")
 
 activity.labels
@@ -66,7 +66,7 @@ activity.labels
 5  5           STANDING
 6  6             LAYING
 
-read the feature variable (names) into a dataframe
+##read the feature variable (names) into a dataframe
 features <- read.table("./features.txt", header = FALSE, sep = " ", stringsAsFactors = FALSE)
 
 head(features)
