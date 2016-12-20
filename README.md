@@ -91,7 +91,7 @@ str(subject.train)
 * $ V1: int  1 1 1 1 1 1 1 1 1 1 ...
  these values range from 1 to 30 and correspond to the 30 subjects used in the experiement
 
-## read the activities for the train data into a dataframe
+##read the activities for the train data into a dataframe
 activity.train <- read.table("./train/y_train.txt", header = FALSE, sep = " ")
 
 str(activity.train)
@@ -109,7 +109,7 @@ names(subject.train) <- "Subject"
 names(activity.train) <- "Activity"
 
 
-##get the corresponding test data from the test subdirectory
+###get the corresponding test data from the test subdirectory
 
 ##read the subjects for the test data set into a dataframe
 subject.test <- read.table("./test/subject_test.txt", header = FALSE, sep = " ")
@@ -139,6 +139,7 @@ data.all  <- rbind(data.train,data.test)
 ##Use descriptive activity names to name the activities in the data set
  because each activityID "x" is the same as the row value in the activity labels dataframe
  I simply lookup the corresponding activity label (by row value) and return the character string
+
 data.all$Activity <- sapply(data.all$Activity, function(x){as.character(activity.labels$V2)[x]})
 
 ##extract mean and std values. I am keeping any feature with mean or std not just the mean() and std() ones,
@@ -148,7 +149,7 @@ data.all$Activity <- sapply(data.all$Activity, function(x){as.character(activity
 
 ##extract the index position of each feature that has mean or std in the column name
 index.names <- grep("mean|std", features$V2, ignore.case = TRUE)
- but Subject and Activity are in postion 1:2 in the data.all dataframe
+####but Subject and Activity are in postion 1:2 in the data.all dataframe
 index.names <- c(1:2, index.names + 2)
 
 ##select the subject, activity and features with mean and std in the name
@@ -156,7 +157,7 @@ data.ms <- select(data.all,index.names)
 
 ##extract the lables of each feature that has mean or std in the column name
 ms.names <- grep("mean|std", features$V2, value = TRUE, ignore.case = TRUE)
- but Subject and Activity are in postion 1:2 in the data.all dataframe
+####but Subject and Activity are in postion 1:2 in the data.all dataframe
 ms.names <- c("Subject","Activity", ms.names)
 
 ##Label the data set with descriptive variable names.
