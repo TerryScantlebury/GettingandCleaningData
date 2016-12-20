@@ -4,7 +4,8 @@
 	Integer values from the set [1:30] representing the 30 test subjects
 	
 ##Activity
-	Character string representing the 6 activities performed by the test subjects. Theses are:-
+	Character string representing the 6 activities performed by the test subjects. 
+	Theses are:-
 		WALKING
 		WALKING_UPSTAIRS
 		WALKING_DOWNSTAIRS
@@ -13,10 +14,12 @@
 		LAYING
 	
 ##mean-value
-	Numeric value, mean() of the corresponding feature. Because each feature is normalized on [-1,1], this value is dimensionless  
+	Numeric value, mean() of the corresponding feature. 
+	Because each feature is normalized on [-1,1], this value is dimensionless  
 
 ##Variable
-	Character string representing one of the feature variables that was normalized to a dimensionless value. These are taken from the following set.
+	Character string representing one of the feature variables that was normalized to a dimensionless value. 
+	These are taken from the following set.
 		"tBodyAcc-mean()-X"
 		"tBodyAcc-mean()-Y"
 		"tBodyAcc-mean()-Z"
